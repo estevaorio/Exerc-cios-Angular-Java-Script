@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercícios</title>
+</head>
+<body>
+    <h2>57) Escrever um algoritmo para ler três valores inteiros e escrever na tela o maior e o menor deles.
+            Considere que todos os valores são diferentes.</h2>
+
+        <label>Nota 1</label>
+        <input type="number" id="n1">
+        <label>Nota 2</label>
+        <input type="number" id="n2">
+        <label>Nota 3</label>
+        <input type="number" id="n3">
+        <label>Nota 4</label>
+        <input type="number" id="n4">
+        <button onclick="media()">Ok</button>
+
+        <div id="saida"></div>
+</body>
+</html>
+
+     <script>
+         function media(){
+             var n1 = parseFloat(document.querySelector("#n1").value);
+             var n2 = parseFloat(document.querySelector("#n2").value);
+             var n3 = parseFloat(document.querySelector("#n3").value);
+             var n4 = parseFloat(document.querySelector("#n4").value);
+             var media = (n1 + n2 + n3 + n4) / 4;
+             
+             if(media >= 5){
+                
+             }else{
+                saida("<p> Aprovado: " + media +  "</p>", "#saida");
+           }
+              saida("<p> Reprovado: " + media +  "</p>", "#saida");
+         }
+
+         function saida(texto, local){
+            document.querySelector(local).innerHTML = texto;
+         }
+     </script>

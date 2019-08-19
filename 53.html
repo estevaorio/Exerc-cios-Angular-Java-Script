@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercícios</title>
+</head>
+<body>
+    <h2>53) Fazer um algoritmo em javascript para ler quatro valores referentes a quatro notas escolares de um aluno e imprimir
+            uma mensagem dizendo que o aluno foi aprovado, se o valor da média escolar for maior ou igual a 5. Se o aluno não foi
+            aprovado, indicar uma mensagem informando esta condição. Apresentar junto com uma das mensagens o valor da média 
+            do aluno para qualquer condição.</h2>
+
+        <label>Nota 1</label>
+        <input type="number" id="n1">
+        <label>Nota 2</label>
+        <input type="number" id="n2">
+        <label>Nota 3</label>
+        <input type="number" id="n3">
+        <label>Nota 4</label>
+        <input type="number" id="n4">
+        <button onclick="media()">Ok</button>
+
+        <div id="saida"></div>
+</body>
+</html>
+
+     <script>
+         function media(){
+             var n1 = parseFloat(document.querySelector("#n1").value);
+             var n2 = parseFloat(document.querySelector("#n2").value);
+             var n3 = parseFloat(document.querySelector("#n3").value);
+             var n4 = parseFloat(document.querySelector("#n4").value);
+             var media = (n1 + n2 + n3 + n4) / 4;
+             
+             if(media >= 5){
+                
+             }else{
+                saida("<p> Aprovado: " + media +  "</p>", "#saida");
+           }
+              saida("<p> Reprovado: " + media +  "</p>", "#saida");
+         }
+
+         function saida(texto, local){
+            document.querySelector(local).innerHTML = texto;
+         }
+     </script>
