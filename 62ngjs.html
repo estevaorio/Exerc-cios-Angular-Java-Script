@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercícios</title>
+</head>
+     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-animate.js"></script>
+     
+<body ng-app="ex50" ng-controller="ctrl50">
+    <h2>62) Escrever um algoritmo para ler dois valores e uma das 
+            seguintes operações a serem executadas (codificadas da
+            seguinte forma: 1 – Adição, 2 – Subtração, 3 – Multiplicação 
+            e 4 – Divisão). Calcular e escrever o resultado dessa operação
+            sobre os dois valores lidos</h2>
+    
+      <div ng-app="myApp" ng-controller="formCtrl">
+        <form novalidate>
+          Primeiro valor:<br>
+            <input type="text" ng-model="primeirovalor"><br>
+              Segundo valor:<br>
+                <input type="text" ng-model="segundovalor">
+                  <br><br>
+                    Operação:<br>
+                     <input type="text" ng-model="operacao">
+                       
+                       <br><br>
+                        <div ng-bind-html="saida"></div>
+        </form>
+                    
+      </div>
+            
+        
+</body>
+</html>
+
+     <script>
+         var app = angular.module('myApp', []);
+             app.controller('formCtrl', function($scope) {
+                $scope.master = {primeirovalor, segundovalor, operacao};
+                $scope.saida = function(primeirovalor, segundovalor, operacao) {
+                $scope.user = angular.copy($scope.master);
+            };
+                $scope.reset();
+        });
+     </script>
